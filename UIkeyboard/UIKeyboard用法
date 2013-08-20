@@ -1,0 +1,12 @@
+
+引用UIKeyboardViewController 
+
+在viewWillAppear 种实例化并添加键盘工具栏
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    keyBoardController = [[UIKeyboardViewController alloc]initWithControllerDelegate:self];
+    [keyBoardController addToolbarToKeyboard];
+}
