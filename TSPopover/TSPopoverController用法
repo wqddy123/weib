@@ -1,0 +1,32 @@
+
+在需要弹出的触发地 触发该方法。实例需要弹出的窗口，
+
+实例 TSPopoverController 
+
+show 出窗口 并指定 event
+
+-(void)popWindow:(id)sender forEvent:(UIEvent *) event
+{
+    RightPopViewController * rpvc = [[RightPopViewController alloc ]init];
+
+    TSPopoverController *popoverController = [[TSPopoverController alloc] initWithContentViewController:rpvc];
+ 
+    popoverController.popoverBaseColor = [UIColor lightGrayColor];
+    [popoverController showPopoverWithTouch:event];
+
+    
+}
+
+#pragma make -
+#pragma make UIKeyboardViewControllerDelegate
+-(void)alttextFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"textField : %@" , textField.text);
+}
+-(void)alttextViewDidEndEditing:(UITextView *)textView
+{
+    NSLog(@"textView: %@",textView.text);
+}
+
+
+
