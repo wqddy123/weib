@@ -10,14 +10,11 @@
 
 @implementation AppDelegate
 
-@synthesize mainViewController;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    //self.window.backgroundColor = [UIColor whiteColor];
-    mainViewController  = [[MainViewController alloc]init];
-    self.window.rootViewController = mainViewController;
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
